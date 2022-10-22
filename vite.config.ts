@@ -5,14 +5,16 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   build: {
     lib: {
-      entry: "/src/components/index.ts",
+      entry: "./src/components/index.ts",
       name: "MothUI",
-      fileName: "moth-ui",
+      fileName: (format) => `moth-ui.${format}.js`,
     },
     rollupOptions: {
-      externa: ["react"],
+      external: ["react"],
       output: {
-        globals: "React",
+        globals: {
+          react: "React",
+        },
       },
     },
   },
