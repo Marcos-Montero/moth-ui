@@ -27,7 +27,7 @@ export const Button = ({
       style={{ backgroundColor }}
       {...props}
     >
-      {children}
+      <span className="buttonSpan">{children}</span>
     </button>
   );
 };

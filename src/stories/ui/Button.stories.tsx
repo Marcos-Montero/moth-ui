@@ -17,20 +17,17 @@ const Template: ComponentStory<typeof ButtonC> = (args) => (
       display: "flex",
       alignItems: "center",
       justifyContent: "space-evenly",
+      flexWrap: "wrap",
+      gap: "1em",
     }}
   >
-    <ButtonC {...args}>A</ButtonC>
-    <ButtonC {...args}>B</ButtonC>
-    <ButtonC {...args}>C</ButtonC>
-    <ButtonC {...args}>A</ButtonC>
-    <ButtonC {...args}>B</ButtonC>
-    <ButtonC {...args}>C</ButtonC>
-    <ButtonC {...args}>A</ButtonC>
-    <ButtonC {...args}>B</ButtonC>
-    <ButtonC {...args}>C</ButtonC>
+    <ButtonC {...args}>{"<"}</ButtonC>
+    <ButtonC {...args}>1</ButtonC>
+    <ButtonC {...args}>2</ButtonC>
+    <ButtonC {...args}>3</ButtonC>
+    <ButtonC {...args}>{">"}</ButtonC>
   </div>
 );
-
 export const Button = Template.bind({});
 Button.args = {
   primary: true,

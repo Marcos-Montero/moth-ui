@@ -1,0 +1,7 @@
+.slide {
+  background: transparent;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.432);
+  height: 20px;
+  width: 60px;
+  border-radius: 20px;
+}

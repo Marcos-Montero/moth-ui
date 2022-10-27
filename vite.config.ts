@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
-// https://vitejs.dev/config/
+import dts from "vite-plugin-dts";
 export default defineConfig({
   build: {
     lib: {
@@ -18,5 +17,10 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
 });

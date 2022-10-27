@@ -1,10 +1,15 @@
 
 {
   "compilerOptions": {
+    "module": "ESNext",  
+    "declaration": true,
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
     "strict": true,
@@ -18,7 +23,7 @@
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "skipLibCheck": true,
     "outDir": "dist",
-    "declaration": true
   },
-  "include": ["vite.config.*", "vite-env.d.ts", "src/components/**/*.tsx"]
+  "include": ["vite.config.*", "vite-env.d.ts", "src/components/**/*.tsx"],
+  "exclude": ["dist","node_modules","src/stories/**/*"]
 }
